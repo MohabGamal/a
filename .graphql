@@ -1,0 +1,56 @@
+query findall{
+  games {
+    title,
+    platform,
+  },
+  authors {
+    name,
+    verified,
+  }
+}
+
+query findGame($id: ID!){
+  game(id: $id) {
+    title,
+    platform,
+    reviews {
+      content,
+      rating,
+      author {
+        name
+      }
+    }
+  }
+}
+
+mutation addGame($game: AddGameInput!){
+  addGame(game: $game) {
+    id,
+    title,
+    platform
+  }
+}
+
+mutation editGame($id: ID!, $game: EditGameInput){
+  editGame(id: $id, game: $game) {
+    title
+  }
+}
+
+mutation deleteGame($id: ID!){
+  deleteGame(id: $id) {
+    title,
+  }
+}
+
+
+
+Variables:
+{
+  "id": "2",
+  "game": {
+    "title": "ss",
+    "platform": ["Sss", "ss"]
+  },
+
+}

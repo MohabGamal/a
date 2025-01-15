@@ -1,0 +1,17 @@
+{
+  "name": "basic-graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "scripts": {
+    "dev": "npx nodemon index.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.7.3",
+    "graphql": "^16.6.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
